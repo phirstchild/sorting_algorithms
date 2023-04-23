@@ -27,10 +27,10 @@ void merge_subarr(int *subarr, int *buff, size_t front, size_t mid,
 	for (r = front, s = mid; r < mid && s < back; t++)
 		buff[t] = (subarr[r] < subarr[s]) ? subarr[r++] : subarr[s++];
 	for (; r < mid; r++)
-		buff[s++] = subarr[r];
+		buff[t++] = subarr[r];
 	for (; s < back; s++)
 		buff[t++] = subarr[s];
-	for (r = front, s = 0; r < back; r++)
+	for (r = front, t = 0; r < back; r++)
 		subarr[r] = buff[t++];
 
 	printf("[Done]: ");
