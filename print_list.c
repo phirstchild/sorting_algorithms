@@ -6,17 +6,17 @@
  *
  * @list: The list to be printed
  */
-void print_list(const listint_t *list)
+void print_list(const listint_t *list
 {
-	int i;
+	int o;
 
-	i = 0;
+	o = 0;
 	while (list)
 	{
-		if (i > 0)
+		if (o > 0)
 			printf(", ");
 		printf("%d", list->n);
-		++i;
+		++o;
 		list = list->next;
 	}
 	printf("\n");
